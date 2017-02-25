@@ -11,6 +11,8 @@ and displays the Images and description of various buzzes. I have used Solid.css
 `Step 2: npm start`
 * This is the final step. It will automatically open Chrome browser in which the project will open in a new window
 
+P.S. -> Please enable cross origin resource sharing to avoid any errors. [CORS](https://chrome.google.com/webstore/detail/allow-control-allow-origi/nlfbmbojpeacfghkpbjhddihlkkiljbi?utm_source=gmail)
+
 ***
 
 ## My Approach
