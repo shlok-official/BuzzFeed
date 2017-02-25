@@ -10,11 +10,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var post_service_1 = require("./post.service");
+var post_service_1 = require("./service/post.service");
 var AppComponent = (function () {
     function AppComponent(_postService) {
         this._postService = _postService;
     }
+    AppComponent.prototype.onScroll = function () {
+        console.log('scrolled!!');
+    };
     AppComponent.prototype.ngOnInit = function () {
         var _this = this;
         this._postService.getPosts()
@@ -29,8 +32,8 @@ var AppComponent = (function () {
 AppComponent = __decorate([
     core_1.Component({
         selector: 'my-app',
-        template: "<h1>BuzzFeed Front End Assignment</h1>\n  <link rel=\"stylesheet\" href=\"app/solid.2.6.0.min.css\">\n            <div *ngFor = \"#dat of data\"> \n    <div class=\"xs-block-grid-5 xs-mb4 xs-relative xs-t2 xs-l6\">\n\n        <div class=\"block-grid__item fill-white xs-border\">\n            <img class=\"xs-col-12 xs-block\" src=\"{{dat.images.standard}}\" width=\"100\" height=\"100\" alt=\"user\" class=\"circle\" />\n\n            <div class=\"xs-p1\"> \n                <h5 class=\"bold xs-mb1 text-orange\"> {{dat.description}}  </h5>\n            </div>\n\n        </div>\n    </div>\n  </div>  \n  \n  ",
-        styleUrls: ['app/solid.2.6.0.min.css'],
+        templateUrl: 'app/app.component.html',
+        styleUrls: ['app/styles/solid.2.6.0.min.css', 'app/styles/scroll.css'],
     }),
     __metadata("design:paramtypes", [post_service_1.PostService])
 ], AppComponent);
