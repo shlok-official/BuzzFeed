@@ -8,7 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var platform_browser_1 = require("@angular/platform-browser");
-var angular2_infinite_scroll_1 = require("angular2-infinite-scroll");
+//import { InfiniteScrollModule } from 'angular2-infinite-scroll';
 var app_component_1 = require("./app.component");
 //import { platformBrowserDynamic } from '@angular/platform-browser-dynamic'
 var http_1 = require("@angular/http");
@@ -20,7 +20,7 @@ var AppModule = (function () {
 }());
 AppModule = __decorate([
     core_1.NgModule({
-        imports: [platform_browser_1.BrowserModule, http_1.HttpModule, angular2_infinite_scroll_1.InfiniteScrollModule],
+        imports: [platform_browser_1.BrowserModule, http_1.HttpModule],
         declarations: [app_component_1.AppComponent],
         bootstrap: [app_component_1.AppComponent],
         providers: [post_service_1.PostService]
