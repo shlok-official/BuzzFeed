@@ -15,7 +15,7 @@ var AppComponent = (function () {
     function AppComponent(_postService) {
         this._postService = _postService;
     }
-    AppComponent.prototype.onScroll = function () {
+    AppComponent.prototype.onScrollDown = function () {
         console.log('scrolled!!');
     };
     AppComponent.prototype.ngOnInit = function () {
@@ -33,8 +33,12 @@ AppComponent = __decorate([
     core_1.Component({
         selector: 'my-app',
         templateUrl: 'app/app.component.html',
-        styleUrls: ['app/styles/solid.2.6.0.min.css', 'app/styles/scroll.css'],
-    }),
+        styleUrls: ['app/styles/solid.2.6.0.css'],
+    })
+    // @Directive({
+    //   selector: '[InfiniteScroll]',
+    // })
+    ,
     __metadata("design:paramtypes", [post_service_1.PostService])
 ], AppComponent);
 exports.AppComponent = AppComponent;
