@@ -15,12 +15,11 @@ import { Directive, ElementRef, Input, Output, EventEmitter } from '@angular/cor
 
 export class AppComponent implements OnInit{ 
 
-  data: any;
+data: any;
 constructor(private _postService: PostService){
     
 }
 onScrollDown () {
-  
         console.log('scrolled!!')
     }
 
@@ -28,8 +27,6 @@ ngOnInit(){
 this._postService.getPosts()
 .subscribe(posts => {
     this.data = posts.buzzes;
-    console.log("DATA");
-    console.log(this.data);
     });
   }
 }

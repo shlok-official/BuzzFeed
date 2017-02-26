@@ -23,8 +23,6 @@ var AppComponent = (function () {
         this._postService.getPosts()
             .subscribe(function (posts) {
             _this.data = posts.buzzes;
-            console.log("DATA");
-            console.log(_this.data);
         });
     };
     return AppComponent;
